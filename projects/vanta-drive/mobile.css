@@ -1,0 +1,28 @@
+@media (max-width: 720px) {
+  body.vanta-menu-open { overflow: hidden; }
+  .mobile-drawer .mobile-drawer-close { position: absolute; top: 18px; right: 20px; width: 42px; height: 42px; border: 1px solid #444; border-radius: 50%; background: #171717; color: #fff; font-size: 26px; line-height: 1; }
+}
+
+@media (max-width: 480px) {
+  .nav .logo { font-size: 13px; gap: 7px; letter-spacing: .1em; }
+  .hero .hero-content h1 { font-size: clamp(42px, 12vw, 56px); }
+  .inner-hero .container h1, .detail-content .container h1 { font-size: clamp(40px, 11vw, 54px); overflow-wrap: break-word; }
+  .hero-actions .btn { flex: 1 1 100%; text-align: center; }
+  .hero-bottom .hero-stat { min-width: 0; padding-left: 16px; }
+  .car-info .car-top { display: block; }
+  .car-top .car-price { margin-top: 12px; text-align: left; }
+  .car-top .car-name { font-size: clamp(20px, 6vw, 25px); }
+  .car-info .specs { flex-wrap: wrap; gap: 8px 12px; }
+  .detail-card .detail-spec-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .detail-spec-grid .detail-spec { padding: 14px 10px; }
+  .detail-spec-grid .detail-spec b { font-size: 15px; overflow-wrap: anywhere; }
+  .contact-grid .contact-panel { min-height: 0; padding: 20px; }
+  .contact-grid .contact-panel h2 { font-size: clamp(31px, 9vw, 45px); }
+  .contact-grid .map-art { min-height: 300px; }
+  .map-art .map-label { left: 10%; top: 58%; max-width: 80%; }
+  .footer-col span { overflow-wrap: anywhere; }
+  .mobile-drawer { overflow-y: auto; }
+  body .mobile-drawer a { font-size: clamp(24px, 8vw, 36px); }
+  .modal-backdrop { overflow-y: auto; }
+  .modal-backdrop .modal { max-height: calc(100vh - 36px); max-height: calc(100dvh - 36px); overflow-y: auto; }
+}

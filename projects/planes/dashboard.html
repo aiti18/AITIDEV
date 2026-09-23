@@ -1,0 +1,61 @@
+<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Dashboard — PLANES</title><link rel="stylesheet" href="styles.css?v=20260921-1"></head>
+<body><div class="shell">
+<aside class="sidebar">
+  <a class="brand" href="dashboard.html"><span class="brand-mark">P</span> PLANES</a>
+  <div class="nav-group">
+    <div class="nav-label">Workspace</div>
+    <a class="nav-item active" href="dashboard.html"><span class="icon">⌂</span> Home</a>
+    <a class="nav-item" href="#"><span class="icon">✓</span> My Tasks</a>
+    <a class="nav-item " href="projects.html"><span class="icon">◫</span> Projects</a>
+    <a class="nav-item " href="calendar.html"><span class="icon">□</span> Calendar</a>
+    <a class="nav-item " href="calendar.html#analytics"><span class="icon">⌁</span> Analytics</a>
+  </div>
+  <div class="nav-group">
+    <div class="nav-label">Teams</div>
+    <a class="nav-item" href="#"><span class="icon">●</span> Design Team</a>
+    <a class="nav-item" href="#"><span class="icon">●</span> Marketing</a>
+    <a class="nav-item" href="#"><span class="icon">●</span> Development</a>
+  </div>
+  <div class="sidebar-bottom">
+    <a class="nav-item" href="#"><span class="icon">⚙</span> Settings</a>
+    <a class="nav-item" href="#"><span class="icon">?</span> Help Center</a>
+    <div class="user-mini"><div class="avatar">AD</div><div><strong>Developer Aitenir</strong><span>AITIDEV</span></div></div>
+  </div>
+</aside>
+<main class="main"><div class="mobile-top"><a class="brand" style="padding:0" href="dashboard.html"><span class="brand-mark">P</span> PLANES</a><button class="btn">☰</button></div>
+<div class="topbar">
+  <div><div class="eyebrow">Thursday, September 17</div><h1>Good afternoon, Alex 👋</h1><div class="muted">Here’s what needs your attention today.</div></div>
+  <div class="actions"><button class="btn">⌕ Search</button><button class="btn primary" data-open-modal="taskModal">+ Create task</button></div>
+</div>
+<section class="grid-4">
+  <div class="stat"><div class="label">Tasks today</div><div class="num">12</div><div class="trend">↑ 8% from yesterday</div></div>
+  <div class="stat"><div class="label">In progress</div><div class="num">4</div><div class="trend">2 high priority</div></div>
+  <div class="stat"><div class="label">Completed</div><div class="num">7</div><div class="trend">↑ 14% this week</div></div>
+  <div class="stat"><div class="label">Overdue</div><div class="num">2</div><div class="trend" style="color:var(--red)">Needs attention</div></div>
+</section>
+<section class="content-grid">
+  <div>
+    <div class="card">
+      <div class="card-header"><div><h2>Today</h2><div class="muted" style="font-size:11px">Your most important work</div></div><button class="btn ghost">View all</button></div>
+      <div class="task"><div><div class="task-title">Landing page redesign</div><div class="task-meta"><span class="badge">Design</span><span>Today, 16:00</span><span>Website Redesign</span></div><div class="progress"><span style="width:70%"></span></div></div><div class="avatar">AT</div></div>
+      <div class="task"><div><div class="task-title">Prepare launch presentation</div><div class="task-meta"><span class="badge orange">Marketing</span><span>Today, 18:30</span><span>Autumn Campaign</span></div><div class="progress"><span style="width:42%"></span></div></div><div class="avatar">MK</div></div>
+      <div class="task"><div><div class="task-title">API integration review</div><div class="task-meta"><span class="badge green">Development</span><span>Tomorrow</span><span>Mobile Application</span></div><div class="progress"><span style="width:25%"></span></div></div><div class="avatar">DV</div></div>
+    </div>
+    <div class="card" style="margin-top:18px">
+      <div class="card-header"><div><h2>Productivity</h2><div class="muted" style="font-size:11px">Completed tasks this week</div></div><span class="badge green">+18%</span></div>
+      <div class="chart"><div class="bar" style="height:42%"><small>Mon</small></div><div class="bar" style="height:63%"><small>Tue</small></div><div class="bar" style="height:49%"><small>Wed</small></div><div class="bar" style="height:78%"><small>Thu</small></div><div class="bar" style="height:88%"><small>Fri</small></div><div class="bar" style="height:54%"><small>Sat</small></div><div class="bar" style="height:35%"><small>Sun</small></div></div>
+    </div>
+  </div>
+  <div>
+    <div class="card"><div class="card-header"><h2>Upcoming</h2><button class="btn ghost">•••</button></div><div class="timeline">
+      <div class="event"><time>15:00</time><div><strong>Design review</strong><div class="muted" style="font-size:10px;margin-top:4px">Design Team · 4 people</div></div></div>
+      <div class="event"><time>17:30</time><div><strong>Client meeting</strong><div class="muted" style="font-size:10px;margin-top:4px">Website Redesign</div></div></div>
+      <div class="event"><time>Tomorrow</time><div><strong>Sprint planning</strong><div class="muted" style="font-size:10px;margin-top:4px">Development</div></div></div>
+    </div></div>
+    <div class="card" style="margin-top:18px"><div class="card-header"><h2>Project health</h2><span class="badge green">On track</span></div>
+      <div style="font-size:46px;font-weight:700;letter-spacing:-2px">87%</div><div class="muted" style="font-size:11px">Overall completion rate</div><div class="progress" style="margin-top:18px;height:8px"><span style="width:87%"></span></div>
+    </div>
+  </div>
+</section>
+<div class="modal-backdrop" id="taskModal"><div class="modal"><button class="close" data-close-modal>×</button><h2>Create new task</h2><p class="muted" style="font-size:12px">Add a task to your workspace.</p><div class="field"><label>TASK NAME</label><input placeholder="e.g. Prepare homepage prototype"></div><div class="field"><label>PROJECT</label><select><option>Website Redesign</option><option>Mobile Application</option><option>Marketing Campaign</option></select></div><div class="field"><label>DEADLINE</label><input type="date"></div><button class="btn primary full" data-close-modal>Create task</button></div></div>
+</main></div><script src="app.js?v=20260921-1"></script></body></html>

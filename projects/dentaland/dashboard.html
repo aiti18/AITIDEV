@@ -1,0 +1,59 @@
+<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Dashboard — Denta.Land</title><link rel="stylesheet" href="styles.css?v=20260921-1"></head>
+<body><div class="shell">
+<aside class="sidebar">
+  <a href="dashboard.html" class="brand"><span class="brand-mark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M8.2 3.5c1.5-.7 2.7.4 3.8.4s2.3-1.1 3.8-.4c2.8 1.3 3.1 5.7 1.7 8.6-1 2.1-1.3 7.4-3.2 7.4-1.5 0-1.4-4.7-2.3-4.7s-.8 4.7-2.3 4.7c-1.9 0-2.2-5.3-3.2-7.4-1.4-2.9-1.1-7.3 1.7-8.6z"/></svg></span>Denta.Land</a>
+  <div>
+    <div class="nav-label">Clinic</div>
+    <a class="nav-item active" href="dashboard.html"><span class="nav-ico">⌂</span> Dashboard</a>
+    <a class="nav-item " href="patients.html"><span class="nav-ico">◎</span> Patients</a>
+    <a class="nav-item " href="calendar.html"><span class="nav-ico">□</span> Calendar</a>
+    <a class="nav-item " href="messages.html"><span class="nav-ico">◌</span> Messages</a>
+    <div class="nav-label">Tools</div>
+    <a class="nav-item " href="calculator.html"><span class="nav-ico">⌘</span> Calculator Builder</a>
+    <a class="nav-item" href="#"><span class="nav-ico">▤</span> Billing</a>
+    <a class="nav-item" href="#"><span class="nav-ico">⌁</span> Reports</a>
+  </div>
+  <div class="sidebar-bottom">
+    <a class="nav-item" href="#"><span class="nav-ico">⚙</span> Settings</a>
+    <a class="nav-item" href="#"><span class="nav-ico">?</span> Help center</a>
+    <div class="profile-mini"><div class="avatar">AD</div><div><b>Developer Aitenir</b><span>AITIDEV</span></div></div>
+  </div>
+</aside>
+<main class="main"><div class="mobile-head"><a class="brand" href="dashboard.html"><span class="brand-mark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M8.2 3.5c1.5-.7 2.7.4 3.8.4s2.3-1.1 3.8-.4c2.8 1.3 3.1 5.7 1.7 8.6-1 2.1-1.3 7.4-3.2 7.4-1.5 0-1.4-4.7-2.3-4.7s-.8 4.7-2.3 4.7c-1.9 0-2.2-5.3-3.2-7.4-1.4-2.9-1.1-7.3 1.7-8.6z"/></svg></span>Denta.Land</a><button class="btn">☰</button></div>
+<div class="topbar">
+  <div><div class="eyebrow">Thursday, September 17</div><h1>Clinic overview</h1><div class="muted">A quick look at patients, appointments and revenue today.</div></div>
+  <div class="actions"><button class="btn">Export report</button><button class="btn primary" data-open-modal="apptModal">+ New appointment</button></div>
+</div>
+<section class="grid-4">
+  <div class="stat"><div class="stat-head"><span class="stat-label">Appointments today</span><span class="stat-icon">□</span></div><div class="stat-value">12</div><div class="stat-note">3 completed · 9 upcoming</div></div>
+  <div class="stat"><div class="stat-head"><span class="stat-label">New patients</span><span class="stat-icon">+</span></div><div class="stat-value">8</div><div class="stat-note">+14% this month</div></div>
+  <div class="stat"><div class="stat-head"><span class="stat-label">Treatment value</span><span class="stat-icon">$</span></div><div class="stat-value">$7.4k</div><div class="stat-note">+8.2% vs last week</div></div>
+  <div class="stat"><div class="stat-head"><span class="stat-label">Chair utilization</span><span class="stat-icon">%</span></div><div class="stat-value">86%</div><div class="stat-note">Healthy schedule load</div></div>
+</section>
+<section class="content-grid">
+  <div>
+    <div class="card">
+      <div class="card-head"><div><h2>Today’s appointments</h2><div class="muted" style="font-size:10px">September 17 · Main clinic</div></div><a class="btn ghost" href="calendar.html">View calendar</a></div>
+      <table class="table"><thead><tr><th>PATIENT</th><th>TIME</th><th>PROCEDURE</th><th>DOCTOR</th><th>STATUS</th></tr></thead><tbody>
+        <tr><td><div class="patient-cell"><div class="avatar">AS</div><div><b>Amina S.</b><div class="muted" style="font-size:9px">#PT-1048</div></div></div></td><td>10:00</td><td>Hygiene</td><td>Dr. Mira</td><td><span class="badge green">Completed</span></td></tr>
+        <tr><td><div class="patient-cell"><div class="avatar">DK</div><div><b>Daniyar K.</b><div class="muted" style="font-size:9px">#PT-1051</div></div></div></td><td>11:30</td><td>Root canal</td><td>Dr. Alex</td><td><span class="badge blue">In chair</span></td></tr>
+        <tr><td><div class="patient-cell"><div class="avatar">EB</div><div><b>Elena B.</b><div class="muted" style="font-size:9px">#PT-0962</div></div></div></td><td>14:30</td><td>Consultation</td><td>Dr. Mira</td><td><span class="badge orange">Upcoming</span></td></tr>
+        <tr><td><div class="patient-cell"><div class="avatar">TA</div><div><b>Timur A.</b><div class="muted" style="font-size:9px">#PT-1011</div></div></div></td><td>16:00</td><td>Implant review</td><td>Dr. Daniel</td><td><span class="badge gray">Confirmed</span></td></tr>
+      </tbody></table>
+    </div>
+    <div class="card" style="margin-top:16px"><div class="card-head"><div><h2>Revenue trend</h2><div class="muted" style="font-size:10px">Last 7 days</div></div><span class="badge green">+11.8%</span></div>
+      <div class="chart"><div class="bar" style="height:44%"><small>Mon</small></div><div class="bar" style="height:59%"><small>Tue</small></div><div class="bar" style="height:51%"><small>Wed</small></div><div class="bar" style="height:77%"><small>Thu</small></div><div class="bar" style="height:86%"><small>Fri</small></div><div class="bar" style="height:62%"><small>Sat</small></div><div class="bar" style="height:34%"><small>Sun</small></div></div>
+    </div>
+  </div>
+  <div>
+    <div class="card"><div class="card-head"><h2>Next appointments</h2><span class="badge">Live</span></div><div class="schedule">
+      <div class="appt"><time>14:30</time><div><b>Elena B.</b><small>Consultation · Dr. Mira</small></div><div class="avatar">EB</div></div>
+      <div class="appt"><time>15:20</time><div><b>Maksim R.</b><small>Whitening · Dr. Alex</small></div><div class="avatar">MR</div></div>
+      <div class="appt"><time>16:00</time><div><b>Timur A.</b><small>Implant review · Dr. Daniel</small></div><div class="avatar">TA</div></div>
+      <div class="appt"><time>17:15</time><div><b>Sofia N.</b><small>Orthodontics · Dr. Mira</small></div><div class="avatar">SN</div></div>
+    </div></div>
+    <div class="card" style="margin-top:16px"><div class="card-head"><h2>Treatment acceptance</h2><span class="badge green">Good</span></div><div style="font-family:Manrope;font-size:42px;font-weight:800">78%</div><div class="muted" style="font-size:10px;margin-bottom:14px">Approved treatment plans this month</div><div class="progress"><span style="width:78%"></span></div></div>
+  </div>
+</section>
+<div class="modal-backdrop" id="apptModal"><div class="modal"><button class="close" data-close-modal>×</button><h2>New appointment</h2><p class="muted" style="font-size:11px">Schedule a patient visit.</p><div class="field"><label>PATIENT</label><input placeholder="Search patient"></div><div class="field"><label>PROCEDURE</label><select><option>Consultation</option><option>Hygiene</option><option>Implant review</option><option>Root canal</option></select></div><div class="field"><label>DATE & TIME</label><input type="datetime-local"></div><button class="btn primary" style="width:100%" data-close-modal>Schedule appointment</button></div></div>
+</main></div><script src="app.js?v=20260921-1"></script></body></html>

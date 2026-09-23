@@ -1,0 +1,28 @@
+Denta.Land — Case Study Notes
+
+Project type:
+Dental clinic management SaaS / healthcare operations interface.
+
+Real frontend stack:
+TypeScript, Vite, Bootstrap, Sass (SCSS).
+
+Core areas:
+1. Dashboard and clinic KPIs
+2. Patients and clinical records
+3. Appointment calendar
+4. Treatment plan management
+5. Modal/forms/table UI patterns
+6. Patient messaging
+7. Pricing and Calculator Builder
+8. Responsive layout for desktop and mobile
+
+Suggested portfolio headline:
+Denta.Land — Dental clinic management SaaS
+
+Suggested short description:
+A responsive dental clinic workspace for managing patients, appointments,
+treatment plans, communication and pricing workflows. The interface was built
+around reusable components and operational dashboard patterns.
+
+Suggested technology labels:
+TypeScript · Vite · Bootstrap · Sass · Responsive UI · SaaS Dashboard

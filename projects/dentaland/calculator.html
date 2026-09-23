@@ -1,0 +1,40 @@
+<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Calculator Builder — Denta.Land</title><link rel="stylesheet" href="styles.css?v=20260921-1"></head>
+<body><div class="shell">
+<aside class="sidebar">
+  <a href="dashboard.html" class="brand"><span class="brand-mark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M8.2 3.5c1.5-.7 2.7.4 3.8.4s2.3-1.1 3.8-.4c2.8 1.3 3.1 5.7 1.7 8.6-1 2.1-1.3 7.4-3.2 7.4-1.5 0-1.4-4.7-2.3-4.7s-.8 4.7-2.3 4.7c-1.9 0-2.2-5.3-3.2-7.4-1.4-2.9-1.1-7.3 1.7-8.6z"/></svg></span>Denta.Land</a>
+  <div>
+    <div class="nav-label">Clinic</div>
+    <a class="nav-item " href="dashboard.html"><span class="nav-ico">⌂</span> Dashboard</a>
+    <a class="nav-item " href="patients.html"><span class="nav-ico">◎</span> Patients</a>
+    <a class="nav-item " href="calendar.html"><span class="nav-ico">□</span> Calendar</a>
+    <a class="nav-item " href="messages.html"><span class="nav-ico">◌</span> Messages</a>
+    <div class="nav-label">Tools</div>
+    <a class="nav-item active" href="calculator.html"><span class="nav-ico">⌘</span> Calculator Builder</a>
+    <a class="nav-item" href="#"><span class="nav-ico">▤</span> Billing</a>
+    <a class="nav-item" href="#"><span class="nav-ico">⌁</span> Reports</a>
+  </div>
+  <div class="sidebar-bottom">
+    <a class="nav-item" href="#"><span class="nav-ico">⚙</span> Settings</a>
+    <a class="nav-item" href="#"><span class="nav-ico">?</span> Help center</a>
+    <div class="profile-mini"><div class="avatar">AD</div><div><b>Developer Aitenir</b><span>AITIDEV</span></div></div>
+  </div>
+</aside>
+<main class="main"><div class="mobile-head"><a class="brand" href="dashboard.html"><span class="brand-mark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M8.2 3.5c1.5-.7 2.7.4 3.8.4s2.3-1.1 3.8-.4c2.8 1.3 3.1 5.7 1.7 8.6-1 2.1-1.3 7.4-3.2 7.4-1.5 0-1.4-4.7-2.3-4.7s-.8 4.7-2.3 4.7c-1.9 0-2.2-5.3-3.2-7.4-1.4-2.9-1.1-7.3 1.7-8.6z"/></svg></span>Denta.Land</a><button class="btn">☰</button></div>
+<div class="topbar"><div><div class="eyebrow">Tools</div><h1>Calculator Builder</h1><div class="muted">Create flexible treatment pricing calculators for the clinic.</div></div><div class="actions"><button class="btn">Preview</button><button class="btn primary">Save calculator</button></div></div>
+<section class="builder-layout">
+<div class="palette"><div class="card-head"><h2>Components</h2></div><p class="muted" style="font-size:10px">Click a component to add it.</p>
+<div class="component" data-label="Procedure selector"><b>Procedure selector</b><div class="muted" style="font-size:9px;margin-top:3px">Dropdown / options</div></div>
+<div class="component" data-label="Quantity field"><b>Quantity field</b><div class="muted" style="font-size:9px;margin-top:3px">Numeric input</div></div>
+<div class="component" data-label="Material option"><b>Material option</b><div class="muted" style="font-size:9px;margin-top:3px">Radio / cards</div></div>
+<div class="component" data-label="Discount rule"><b>Discount rule</b><div class="muted" style="font-size:9px;margin-top:3px">Conditional pricing</div></div>
+<div class="component" data-label="Text note"><b>Text note</b><div class="muted" style="font-size:9px;margin-top:3px">Informational content</div></div>
+</div>
+<div class="builder-canvas"><div class="card-head"><div><h2>Implant cost calculator</h2><div class="muted" style="font-size:10px">Draft · Patient-facing estimate</div></div><span class="badge">Live preview</span></div>
+<div class="canvas-block selected"><b>Implant system</b><div class="field" style="margin:10px 0 0"><select><option>Standard implant — $620</option><option>Premium implant — $890</option></select></div></div>
+<div class="canvas-block"><b>Crown material</b><div style="display:flex;gap:7px;margin-top:10px"><button class="btn primary">Ceramic</button><button class="btn">Zirconia</button></div></div>
+<div class="canvas-block"><b>Additional procedures</b><div style="display:flex;gap:8px;margin-top:10px;font-size:10px"><label><input type="checkbox"> CT scan</label><label><input type="checkbox"> Bone graft</label></div></div>
+<div class="price-summary"><span style="font-size:10px;color:#91aaa7">ESTIMATED TOTAL</span><br><strong>$1,480</strong><div style="font-size:9px;color:#8aa7a3;margin-top:6px">Final price may change after clinical examination.</div></div>
+</div>
+<div class="settings"><div class="card-head"><h2>Component settings</h2></div><div class="field"><label>LABEL</label><input value="Implant system"></div><div class="field"><label>BASE PRICE</label><input value="$620"></div><div class="field"><label>REQUIRED</label><select><option>Yes</option><option>No</option></select></div><div class="field"><label>HELP TEXT</label><textarea rows="4">Choose the implant system recommended by the doctor.</textarea></div><button class="btn" style="width:100%">Duplicate component</button></div>
+</section>
+</main></div><script src="app.js?v=20260921-1"></script></body></html>
