@@ -1,4 +1,7 @@
-<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Sign in — Denta.Land</title><link rel="stylesheet" href="styles.css?v=20260921-1"></head>
+<!doctype html><html><head><meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; base-uri 'none'; object-src 'none'; script-src 'self'; script-src-attr 'none'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; connect-src 'none'; frame-src 'none'; form-action 'none'; img-src 'self' data: blob:;">
+<meta name="referrer" content="no-referrer">
+<meta name="viewport" content="width=device-width,initial-scale=1"><title>Sign in — Denta.Land</title><link rel="stylesheet" href="styles.css?v=20260921-1"></head>
 <body><div class="auth-page">
 <section class="auth-side">
   <div class="brand" style="padding:0;position:relative;z-index:2"><span class="brand-mark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M8.2 3.5c1.5-.7 2.7.4 3.8.4s2.3-1.1 3.8-.4c2.8 1.3 3.1 5.7 1.7 8.6-1 2.1-1.3 7.4-3.2 7.4-1.5 0-1.4-4.7-2.3-4.7s-.8 4.7-2.3 4.7c-1.9 0-2.2-5.3-3.2-7.4-1.4-2.9-1.1-7.3 1.7-8.6z"/></svg></span>Denta.Land</div>
@@ -11,13 +14,13 @@
   <div style="position:relative;z-index:2;color:#70908c;font-size:10px">Denta.Land · Clinic Workspace</div>
 </section>
 <section class="auth-form-wrap">
-  <form class="auth-form" onsubmit="event.preventDefault();location.href='dashboard.html'">
-    <h2>Welcome back</h2><p>Sign in to your clinic workspace.</p>
-    <div class="field"><label>EMAIL</label><input required type="email" placeholder="doctor@dentaland.com"></div>
-    <div class="field"><label>PASSWORD</label><input required type="password" placeholder="••••••••"></div>
-    <div style="display:flex;justify-content:space-between;align-items:center;font-size:10px;margin:2px 0 18px"><label><input type="checkbox"> Remember me</label><b style="color:var(--brand)">Forgot password?</b></div>
-    <button class="btn primary" style="width:100%">Sign in</button>
-    <div class="divider">OR</div><button type="button" class="btn" style="width:100%">Continue with Google</button>
-  </form>
+  <div class="auth-form">
+    <h2>Welcome back</h2><p>Portfolio demo. Do not enter real passwords or patient data.</p>
+    <div class="field"><label>EMAIL</label><input disabled type="email" value="demo@example.com"></div>
+    <div class="field"><label>PASSWORD</label><input disabled type="password" placeholder="Not required for the demo"></div>
+    <div style="display:flex;justify-content:space-between;align-items:center;font-size:10px;margin:2px 0 18px"><label><input type="checkbox" disabled> Remember me (demo)</label></div>
+    <a class="btn primary" style="width:100%" href="dashboard.html">Open demo</a>
+    <div class="divider">OR</div><button type="button" class="btn" style="width:100%" disabled>Google sign-in (demo)</button>
+  </div>
 </section>
 </div></body></html>

@@ -142,16 +142,20 @@ function createReviewId() {
 
 function getSavedReviews() {
   try {
-    const saved = JSON.parse(localStorage.getItem(reviewStorageKey) || '[]');
+    const raw = localStorage.getItem(reviewStorageKey) || '[]';
+    if (raw.length > 3500000) return [];
+    const saved = JSON.parse(raw);
     if (!Array.isArray(saved)) return [];
     let needsMigration = false;
-    const reviews = saved.filter((item) => item
-      && ['name', 'role', 'company', 'review'].every((key) => typeof item[key] === 'string' && item[key].trim()))
-      .slice(-20)
+    const reviews = saved.slice(-20).filter((item) => isValidReview(item))
       .map((item) => {
-        if (typeof item.id === 'string' && item.id.trim()) return item;
-        needsMigration = true;
-        return { ...item, id: createReviewId() };
+        const hasId = typeof item.id === 'string' && /^[a-zA-Z0-9-]{1,100}$/.test(item.id);
+        if (!hasId) needsMigration = true;
+        return {
+          id: hasId ? item.id : createReviewId(),
+          name: item.name.trim(), role: item.role.trim(), company: item.company.trim(),
+          review: item.review.trim(), photo: isSavedReviewPhoto(item.photo) ? item.photo : ''
+        };
       });
     if (needsMigration) {
       try {
@@ -166,9 +170,18 @@ function getSavedReviews() {
   }
 }
 
+function isValidReview(review) {
+  if (!review || typeof review !== 'object') return false;
+  const limits = { name: 60, role: 80, company: 80, review: 800 };
+  return Object.entries(limits).every(([key, limit]) => typeof review[key] === 'string'
+    && review[key].trim().length > 0 && review[key].length <= limit)
+    && review.review.trim().length >= 20;
+}
+
 let savedReviews = getSavedReviews();
 
 function saveReview(review) {
+  if (!isValidReview(review)) return false;
   try {
     const next = [...savedReviews, review].slice(-20);
     localStorage.setItem(reviewStorageKey, JSON.stringify(next));
@@ -462,7 +475,7 @@ reviewForm?.addEventListener('submit', (event) => {
     review: String(formData.get('review') || '').trim(),
     photo: pendingReviewPhoto
   };
-  if (!review.name || !review.role || !review.company || review.review.length < 20) {
+  if (!isValidReview(review)) {
     showReviewFeedback('invalid');
     return;
   }

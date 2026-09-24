@@ -1,4 +1,7 @@
-<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Create account — PLANES</title><link rel="stylesheet" href="styles.css?v=20260921-1"></head>
+<!doctype html><html><head><meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; base-uri 'none'; object-src 'none'; script-src 'self'; script-src-attr 'none'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; connect-src 'none'; frame-src 'none'; form-action 'none'; img-src 'self' data: blob:;">
+<meta name="referrer" content="no-referrer">
+<meta name="viewport" content="width=device-width,initial-scale=1"><title>Create account — PLANES</title><link rel="stylesheet" href="styles.css?v=20260921-1"></head>
 <body>
 <div class="auth-page">
   <section class="auth-visual">
@@ -15,18 +18,18 @@
     <div class="muted" style="position:relative;z-index:2;font-size:11px">© 2026 PLANES. Built for focused teams.</div>
   </section>
   <section class="auth-form-wrap">
-    <form class="auth-form" onsubmit="event.preventDefault();location.href='dashboard.html'">
+    <div class="auth-form">
       <h2>Create your account</h2>
-      <p>Start organizing your work in less than a minute.</p>
-      <button type="button" class="btn full social">G&nbsp;&nbsp; Continue with Google</button>
+      <p>Portfolio demo. No real account is created. Do not enter personal credentials.</p>
+      <button type="button" class="btn full social" disabled>G&nbsp;&nbsp; Google sign-in (demo)</button>
       <div class="divider">OR CONTINUE WITH EMAIL</div>
-      <div class="field"><label>FULL NAME</label><input required placeholder="Alex Morgan"></div>
-      <div class="field"><label>EMAIL</label><input type="email" required placeholder="you@example.com"></div>
-      <div class="field"><label>PASSWORD</label><input type="password" required placeholder="At least 8 characters"></div>
-      <button class="btn primary full">Create account</button>
-      <p class="notice">By creating an account you agree to our Terms of Service and Privacy Policy.</p>
+      <div class="field"><label>FULL NAME</label><input disabled value="Demo User"></div>
+      <div class="field"><label>EMAIL</label><input type="email" disabled value="demo@example.com"></div>
+      <div class="field"><label>PASSWORD</label><input type="password" disabled placeholder="Not required for the demo"></div>
+      <a class="btn primary full" href="dashboard.html">Open demo</a>
+      <p class="notice">Explore the sample dashboard without registration.</p>
       <p style="text-align:center;font-size:12px;margin-top:24px">Already have an account? <b style="color:var(--accent)">Sign in</b></p>
-    </form>
+    </div>
   </section>
 </div>
 </body></html>

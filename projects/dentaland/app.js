@@ -44,7 +44,13 @@ document.querySelectorAll('.component').forEach(c=>{
     if(target){
       const d=document.createElement('div');
       d.className='canvas-block';
-      d.innerHTML='<b>'+c.dataset.label+'</b><p class="muted" style="font-size:10px;margin:5px 0 0">New calculator component</p>';
+      const title=document.createElement('b');
+      title.textContent=c.dataset.label||'';
+      const description=document.createElement('p');
+      description.className='muted';
+      description.style.cssText='font-size:10px;margin:5px 0 0';
+      description.textContent='New calculator component';
+      d.append(title,description);
       target.insertBefore(d,target.querySelector('.price-summary'));
     }
   });
