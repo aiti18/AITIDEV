@@ -680,7 +680,7 @@ registerText('.faq__item > p', [
 ]);
 
 registerText('#reviews .section-title', ['#reviews']);
-registerText('.review-card--sample h3', ['Kurmanjan', 'Timur', 'Oksana']);
+registerText('.review-card--sample h3', ['Kurmanjan', 'Timur', 'Aksana']);
 registerText('.review-card--sample .review-card__meta', [
   'Project Manager · PLANES · sample review',
   'Clinic Administrator · Denta.Land · sample review',
@@ -694,7 +694,7 @@ registerText('.review-card--sample p', [
 registerAttribute('.review-card--sample img.review-card__avatar', 'alt', [
   'Portrait of Kurmanjan',
   'Portrait of Timur',
-  'Portrait of Oksana'
+  'Portrait of Aksana'
 ]);
 registerText('.review-add-button__label', ['Leave a review']);
 registerText('.review-modal__eyebrow', ['New review']);
