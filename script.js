@@ -576,7 +576,7 @@ registerText('#about .section-title', ['#about me']);
 registerHtml('.about__content h3', ['Welcome!<br>My name is <span>Aitenir.</span>']);
 registerText('.about__description p', [
   'I am Aitenir, an IT specialist, programmer and freelancer from Bishkek, Kyrgyzstan. I build websites, web applications, server-side solutions, mobile applications, bots and automation solutions.',
-  'I work as an IT specialist and system administrator at AUTOCOM JAPAN INC. Alongside this role, I develop frontend and backend solutions, build APIs and collaborate with a team on commercial projects.'
+  'I work as an IT specialist and system administrator at ACJ CONSULTING. Alongside this role, I develop frontend and backend solutions, build APIs and collaborate with a team on commercial projects.'
 ]);
 registerText('.about__links > span', ['Contact me:']);
 registerAttribute('.about__photo img', 'alt', ['Aitenir — AITIDEV IT specialist']);
@@ -646,7 +646,7 @@ registerAttribute('.skills-cloud', 'aria-label', ["Aitenir's skills"]);
 
 registerText('#experience .section-title', ['#experience']);
 registerText('#experience .important-card h3', [
-  'AUTOCOM JAPAN INC. — System Administrator / IT Specialist',
+  'ACJ CONSULTING — System Administrator / IT Specialist',
   'Frontend — Polytechnic',
   'Geeks Pro',
   'Education — OshTU'
