@@ -7,8 +7,12 @@ const menuClose = document.querySelector('.menu__close');
 const menuShade = document.querySelector('.menu-shade');
 
 function setMenu(open) {
+  if (!menu || menu.classList.contains('active') === open) return;
+  menu.inert = !open;
   body.classList.toggle('menu-open', open);
   menu?.classList.toggle('active', open);
+  if (open) menuClose?.focus();
+  else if (menu.contains(document.activeElement)) burger?.focus();
   menu?.setAttribute('aria-hidden', String(!open));
   burger?.setAttribute('aria-expanded', String(open));
   burger?.setAttribute('aria-label', languageCopy[currentLanguage][open ? 'closeMenu' : 'openMenu']);
@@ -23,23 +27,44 @@ document.addEventListener('keydown', (event) => {
     setMenu(false);
     setReviewModal(false);
   }
+  if (event.key !== 'Tab') return;
+  const panel = reviewModal?.classList.contains('active') ? reviewModal
+    : menu?.classList.contains('active') ? menu : null;
+  if (!panel) return;
+  const controls = [...panel.querySelectorAll('a[href], button, input, textarea, select, [tabindex="0"]')]
+    .filter((element) => !element.disabled && !element.hidden && element.getClientRects().length);
+  const first = controls[0];
+  const last = controls[controls.length - 1];
+  if (!first) return;
+  if (event.shiftKey && (document.activeElement === first || !panel.contains(document.activeElement))) {
+    event.preventDefault();
+    last.focus();
+  } else if (!event.shiftKey && (document.activeElement === last || !panel.contains(document.activeElement))) {
+    event.preventDefault();
+    first.focus();
+  }
 });
 
 function updateHeader() {
-  header?.classList.toggle('fixed', window.scrollY > 20);
+  const fixed = window.scrollY > 20;
+  if (header && header.classList.contains('fixed') !== fixed) header.classList.toggle('fixed', fixed);
 }
 window.addEventListener('scroll', updateHeader, { passive: true });
-window.addEventListener('resize', updateHeader);
 updateHeader();
 
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach((entry) => {
-    if (!entry.isIntersecting) return;
-    entry.target.classList.add('showed');
-    observer.unobserve(entry.target);
+if ('IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (!entry.isIntersecting) return;
+      entry.target.classList.remove('reveal-pending');
+      observer.unobserve(entry.target);
+    });
+  }, { rootMargin: '0px 0px -40px', threshold: 0.01 });
+  document.querySelectorAll('.reveal').forEach((item) => {
+    item.classList.add('reveal-pending');
+    observer.observe(item);
   });
-}, { rootMargin: '0px 0px -80px', threshold: 0.08 });
-document.querySelectorAll('.reveal').forEach((item) => observer.observe(item));
+}
 
 document.querySelectorAll('.faq__item').forEach((item) => {
   item.addEventListener('toggle', () => {
@@ -265,19 +290,33 @@ function goToSlide(index) {
 
 prev?.addEventListener('click', () => goToSlide(slide - 1));
 next?.addEventListener('click', () => goToSlide(slide + 1));
-window.addEventListener('resize', () => goToSlide(slide));
+let reviewResizeFrame = 0;
+window.addEventListener('resize', () => {
+  if (reviewResizeFrame) return;
+  reviewResizeFrame = requestAnimationFrame(() => {
+    reviewResizeFrame = 0;
+    goToSlide(slide);
+  });
+});
 savedReviews.forEach(appendReviewCard);
 rebuildReviewDots();
 goToSlide(0);
 
-let touchStartX = 0;
+let reviewTouchStart = null;
 track?.addEventListener('touchstart', (event) => {
-  touchStartX = event.touches[0].clientX;
+  reviewTouchStart = event.touches.length === 1
+    ? { x: event.touches[0].clientX, y: event.touches[0].clientY } : null;
 }, { passive: true });
 track?.addEventListener('touchend', (event) => {
-  const distance = event.changedTouches[0].clientX - touchStartX;
-  if (Math.abs(distance) > 45) goToSlide(slide + (distance < 0 ? 1 : -1));
+  if (!reviewTouchStart || !event.changedTouches.length) return;
+  const distance = event.changedTouches[0].clientX - reviewTouchStart.x;
+  const verticalDistance = event.changedTouches[0].clientY - reviewTouchStart.y;
+  reviewTouchStart = null;
+  if (Math.abs(distance) > 45 && Math.abs(distance) > Math.abs(verticalDistance)) {
+    goToSlide(slide + (distance < 0 ? 1 : -1));
+  }
 }, { passive: true });
+track?.addEventListener('touchcancel', () => { reviewTouchStart = null; }, { passive: true });
 
 function clearReviewPhoto() {
   photoSelectionId += 1;
@@ -382,19 +421,22 @@ reviewPhotoRemove?.addEventListener('click', () => {
 });
 
 function setReviewModal(open) {
-  if (!reviewModal) return;
+  if (!reviewModal || reviewModal.classList.contains('active') === open) return;
+  reviewModal.inert = !open;
   reviewModal.classList.toggle('active', open);
-  reviewModal.setAttribute('aria-hidden', String(!open));
   body.classList.toggle('review-modal-open', open);
 
   if (open) {
     lastReviewFocus = document.activeElement;
     reviewFeedbackKey = null;
     reviewFormStatus.textContent = '';
-    requestAnimationFrame(() => reviewForm?.querySelector('input')?.focus());
+    requestAnimationFrame(() => {
+      if (reviewModal.classList.contains('active')) reviewForm?.querySelector('input')?.focus();
+    });
   } else if (lastReviewFocus instanceof HTMLElement) {
     lastReviewFocus.focus();
   }
+  reviewModal.setAttribute('aria-hidden', String(!open));
 }
 
 document.querySelector('[data-review-open]')?.addEventListener('click', () => setReviewModal(true));

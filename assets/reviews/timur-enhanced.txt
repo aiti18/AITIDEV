@@ -1,0 +1,7 @@
+Image: timur-enhanced.webp
+Source: nurs-2.png
+Tool: built-in image_gen (identity-preserve edit), followed by cwebp encoding at quality 90 and width 400 px.
+Original source is retained. The website displays the image with object-position: center 15%.
+
+Final image-edit prompt:
+Use case: identity-preserve. Edit target: the supplied original portrait photo of a man outdoors wearing a blue striped shirt. Produce a subtly improved photographic version for a website avatar. Lift the harsh shadows on his face slightly, gently reduce compression artifacts and improve natural facial clarity. Preserve the exact same person, facial features, expression, age, hairstyle, beard, pose, clothing, surroundings, full image composition and framing. Keep realistic skin texture; no face reshaping, no beautification, no invented details, no new text, no oversharpening. Maintain original portrait aspect ratio and enough room above his head.

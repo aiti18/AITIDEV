@@ -22,7 +22,7 @@ if(search){
   search.addEventListener('input',()=>{
     const q=search.value.toLowerCase();
     document.querySelectorAll('.project-card').forEach(c=>{
-      c.style.display=c.innerText.toLowerCase().includes(q)?'block':'none';
+      c.style.display=c.textContent.toLowerCase().includes(q)?'':'none';
     });
   });
 }
@@ -51,6 +51,7 @@ if(mobileToggle&&mobileSidebar){
     mobileToggle.setAttribute('aria-expanded',String(open&&mobileMedia.matches));
     mobileToggle.setAttribute('aria-label',open&&mobileMedia.matches?'Close navigation':'Open navigation');
     mobileSidebar.setAttribute('aria-hidden',String(mobileMedia.matches&&!open));
+    mobileSidebar.inert=mobileMedia.matches&&!open;
   };
   mobileToggle.addEventListener('click',()=>setMobileNav(!document.body.classList.contains('mobile-nav-open')));
   backdrop.addEventListener('click',()=>setMobileNav(false));

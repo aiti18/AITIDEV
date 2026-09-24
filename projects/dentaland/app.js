@@ -21,7 +21,7 @@ if(patientSearch){
   patientSearch.addEventListener('input',()=>{
     const q=patientSearch.value.toLowerCase();
     document.querySelectorAll('.patient-card').forEach(card=>{
-      card.style.display=card.innerText.toLowerCase().includes(q)?'block':'none';
+      card.style.display=card.textContent.toLowerCase().includes(q)?'':'none';
     });
   });
 }
@@ -30,7 +30,7 @@ if(send){
   send.addEventListener('click',()=>{
     const input=document.querySelector('[data-chat-input]');
     const box=document.querySelector('.messages');
-    if(input && input.value.trim()){
+    if(input && box && input.value.trim()){
       const div=document.createElement('div');
       div.className='msg me';
       div.textContent=input.value.trim();
@@ -74,6 +74,7 @@ if(mobileToggle&&mobileSidebar){
     mobileToggle.setAttribute('aria-expanded',String(open&&mobileMedia.matches));
     mobileToggle.setAttribute('aria-label',open&&mobileMedia.matches?'Close navigation':'Open navigation');
     mobileSidebar.setAttribute('aria-hidden',String(mobileMedia.matches&&!open));
+    mobileSidebar.inert=mobileMedia.matches&&!open;
   };
   mobileToggle.addEventListener('click',()=>setMobileNav(!document.body.classList.contains('mobile-nav-open')));
   backdrop.addEventListener('click',()=>setMobileNav(false));
