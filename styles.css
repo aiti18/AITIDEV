@@ -476,7 +476,9 @@ html[lang="en"] .intro__title { font-size: clamp(56px, 6.6vw, 132px); }
   .service__price { grid-column: 2; text-align: left; }
   .cta { margin-top: 78px; }
   .project { margin-bottom: 50px; }
-  .project__visual { aspect-ratio: 1.35 / 1; border-radius: 5px; }
+  .project__visual { aspect-ratio: 2 / 1; border-radius: 5px; background: #f4f4f4; }
+  .project-cover { object-fit: contain; }
+  .project:hover .project-cover { transform: none; }
   .project__tags { gap: 5px; }
   .project__tags i { width: 2px; height: 2px; }
   .project__arrow { width: 50px; height: 40px; }
@@ -524,7 +526,7 @@ html[lang="en"] .intro__title { font-size: clamp(56px, 6.6vw, 132px); }
   .round-button { width: 128px; }
   .cta__buttons { gap: 10px; }
   .cta__buttons a { padding-inline: 12px; font-size: 14px; }
-  .project__visual { aspect-ratio: 1.15 / 1; }
+  .project__visual { aspect-ratio: 2 / 1; }
   .mock-site { width: 82%; height: 74%; }
   .mock-phone { left: 7%; width: 31%; }
   .mock-card { right: 5%; }

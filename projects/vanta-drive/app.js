@@ -1,3 +1,19 @@
+const portfolioBackLink=document.createElement('a');
+portfolioBackLink.className='portfolio-back-link';
+portfolioBackLink.href='../../index.html#portfolio';
+let portfolioLanguage='en';
+try{portfolioLanguage=localStorage.getItem('aitidev-language-v2')==='ru'?'ru':'en'}catch{}
+portfolioBackLink.textContent=portfolioLanguage==='ru'?'← Назад':'← Back';
+portfolioBackLink.setAttribute('aria-label',portfolioLanguage==='ru'?'Назад на основной сайт':'Back to the main site');
+const vantaNav=document.querySelector('.nav');
+const vantaLogo=vantaNav?.querySelector('.logo');
+if(vantaNav&&vantaLogo){
+  const vantaBrandGroup=document.createElement('div');
+  vantaBrandGroup.className='nav-brand-group';
+  vantaNav.insertBefore(vantaBrandGroup,vantaLogo);
+  vantaBrandGroup.append(portfolioBackLink,vantaLogo);
+}
+
 const qs=(s,p=document)=>p.querySelector(s),qsa=(s,p=document)=>[...p.querySelectorAll(s)];
 qsa('[data-open-modal]').forEach(b=>b.addEventListener('click',()=>{qs('#bookingModal')?.classList.add('open');if(b.dataset.car&&qs('#modalCar'))qs('#modalCar').value=b.dataset.car;}));
 qsa('[data-close-modal]').forEach(b=>b.addEventListener('click',()=>b.closest('.modal-backdrop')?.classList.remove('open')));

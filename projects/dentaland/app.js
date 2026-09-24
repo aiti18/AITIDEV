@@ -1,3 +1,23 @@
+const portfolioBackLink=document.createElement('a');
+portfolioBackLink.className='portfolio-back-link';
+portfolioBackLink.href='../../index.html#portfolio';
+let portfolioLanguage='en';
+try{portfolioLanguage=localStorage.getItem('aitidev-language-v2')==='ru'?'ru':'en'}catch{}
+portfolioBackLink.textContent=portfolioLanguage==='ru'?'← Назад':'← Back';
+portfolioBackLink.setAttribute('aria-label',portfolioLanguage==='ru'?'Назад на основной сайт':'Back to the main site');
+const portfolioMobileBar=document.querySelector('.mobile-head');
+const portfolioDesktopBrand=document.querySelector('.sidebar > .brand');
+const portfolioMobileMedia=window.matchMedia('(max-width:820px)');
+const placePortfolioBackLink=()=>{
+  if(portfolioMobileMedia.matches&&portfolioMobileBar){
+    portfolioMobileBar.insertBefore(portfolioBackLink,portfolioMobileBar.querySelector('button'));
+  }else if(portfolioDesktopBrand){
+    portfolioDesktopBrand.insertAdjacentElement('afterend',portfolioBackLink);
+  }
+};
+if(portfolioMobileMedia.addEventListener)portfolioMobileMedia.addEventListener('change',placePortfolioBackLink);
+else portfolioMobileMedia.addListener(placePortfolioBackLink);
+placePortfolioBackLink();
 
 document.querySelectorAll('[data-open-modal]').forEach(btn=>{
   btn.addEventListener('click',()=>{

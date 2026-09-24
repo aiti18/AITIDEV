@@ -1,4 +1,12 @@
+.nav-brand-group { display: flex; align-items: center; gap: 14px; flex: 0 0 auto; }
+.portfolio-back-link { display: inline-flex; align-items: center; justify-content: center; min-height: 36px; padding: 0 14px; border: 1px solid #ad8b55; border-radius: 999px; background: rgba(9, 9, 9, .7); color: #ead0a2; font-size: 11px; font-weight: 700; white-space: nowrap; transition: transform .2s ease, background-color .2s ease; }
+.portfolio-back-link:hover { transform: translateY(-1px); background: #201b13; }
+.portfolio-back-link:focus-visible { outline: 3px solid rgba(234, 208, 162, .3); outline-offset: 3px; }
+
 @media (max-width: 720px) {
+  .nav-brand-group { min-width: 0; gap: 8px; }
+  .nav-brand-group .logo { order: 1; min-width: 0; }
+  .nav-brand-group .portfolio-back-link { order: 2; min-height: 34px; padding-inline: 10px; font-size: 10px; }
   body.vanta-menu-open { overflow: hidden; }
   .mobile-drawer .mobile-drawer-close { position: absolute; top: 18px; right: 20px; width: 42px; height: 42px; border: 1px solid #444; border-radius: 50%; background: #171717; color: #fff; font-size: 26px; line-height: 1; }
 }

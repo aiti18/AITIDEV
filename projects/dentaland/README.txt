@@ -36,7 +36,7 @@ PAGES
 - calendar.html      Appointment calendar
 - messages.html      Patient chat/messages
 - calculator.html    Calculator Builder
-- index.html         Redirects to login
+- index.html         Opens the dashboard directly
 
 PORTFOLIO POSITIONING
 ---------------------

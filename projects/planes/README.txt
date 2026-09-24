@@ -2,7 +2,8 @@ PLANES — SaaS Project Management UI
 ===================================
 
 Pages:
-- register.html — registration / onboarding entry
+- index.html — opens the dashboard directly
+- register.html — optional registration / onboarding mockup
 - dashboard.html — main dashboard
 - projects.html — project library
 - project.html — kanban project workspace
