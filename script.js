@@ -477,6 +477,7 @@ registerText('.statistics__item p', [
   'Skills and technologies in my toolkit'
 ]);
 registerText('.round-button span', ['Portfolio']);
+registerText('.intro__down', ['Down ↓']);
 
 registerText('#services .section-title', ['#services']);
 registerText('.service__text h3', [
@@ -637,7 +638,7 @@ registerText('.faq__item > p', [
 ]);
 
 registerText('#reviews .section-title', ['#reviews']);
-registerText('.review-card--sample h3', ['Kurmanjan Abdisamatova', 'Nursultan Adylov', 'Chynybaeva Aibiike']);
+registerText('.review-card--sample h3', ['Kurmanjan', 'Timur', 'Oksana']);
 registerText('.review-card--sample .review-card__meta', [
   'Project Manager · PLANES · sample review',
   'Clinic Administrator · Denta.Land · sample review',
@@ -649,9 +650,9 @@ registerText('.review-card--sample p', [
   'VANTA DRIVE received a modern website that perfectly conveys the project’s premium style. Aitenir listened to our requests, helped with technical questions and delivered a finished site.'
 ]);
 registerAttribute('.review-card--sample img.review-card__avatar', 'alt', [
-  'Portrait of Kurmanjan Abdisamatova',
-  'Portrait of Nursultan Adylov',
-  'Portrait of Chynybaeva Aibiike'
+  'Portrait of Kurmanjan',
+  'Portrait of Timur',
+  'Portrait of Oksana'
 ]);
 registerText('.review-add-button__label', ['Leave a review']);
 registerText('.review-modal__eyebrow', ['New review']);
@@ -666,14 +667,6 @@ registerAttribute('.review-form textarea', 'placeholder', ['Tell us about the ta
 registerText('.review-form__submit-label', ['Submit review']);
 registerText('.review-form__note', ['Your review and photo are saved only in this browser and can be deleted here.']);
 registerAttribute('.reviews__dots', 'aria-label', ['Review navigation']);
-
-registerText('#blog .section-title', ['#articles']);
-registerText('.article span', [
-  'Future article title',
-  'Useful material for clients',
-  'How I work on a project',
-  'Common website launch mistakes'
-]);
 
 registerHtml('.footer__left h2', ['I would love<br>to work<br>with you.']);
 registerText('.footer__meta a', ['Back to top ↑']);
