@@ -532,7 +532,7 @@ registerText('.statistics__item p', [
   'Skills and technologies in my toolkit'
 ]);
 registerText('.round-button span', ['Portfolio']);
-registerText('.intro__down', ['Down ↓']);
+registerText('.intro__down', ['CONTACT ME ↓']);
 
 registerText('#services .section-title', ['#services']);
 registerText('.service__text h3', [
