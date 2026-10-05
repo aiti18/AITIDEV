@@ -42,7 +42,7 @@ img, svg { display: block; max-width: 100%; }
 }
 
 .header {
-  position: fixed;
+  position: absolute;
   inset: 0 0 auto;
   z-index: 30;
   padding-block: 20px;
