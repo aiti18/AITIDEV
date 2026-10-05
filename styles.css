@@ -51,7 +51,8 @@ img, svg { display: block; max-width: 100%; }
 }
 .header.fixed { background: var(--blue); box-shadow: 0 5px 20px rgba(7, 2, 80, .1); }
 .header__inner { display: flex; align-items: center; justify-content: space-between; gap: 20px; }
-.header__logo { font-size: 16px; font-weight: 300; letter-spacing: .02em; }
+.header__logo { display: flex; width: clamp(118px, 10vw, 158px); align-items: center; }
+.header__logo img { width: 100%; height: auto; }
 .header__contacts { display: none; margin-left: auto; }
 .header.fixed .header__contacts { display: flex; }
 .header.fixed .header__logo { opacity: 1; pointer-events: auto; }
