@@ -565,3 +565,6 @@ html[lang="en"] .intro__title { font-size: clamp(56px, 6.6vw, 132px); }
   *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
   .reveal.reveal-pending { opacity: 1; transform: none; }
 }
+
+/* Preserve the full 16:9 FULL LOGISTICS cover, including the 5000+ badge. */
+.project__visual--three { aspect-ratio: 1672 / 941; }
