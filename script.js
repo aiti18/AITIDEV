@@ -567,10 +567,10 @@ registerHtml('.cta__buttons a', [
 
 registerText('#portfolio .section-title', ['#portfolio']);
 registerText('.project-live', ['OPEN PROJECT', 'OPEN PROJECT', 'OPEN PROJECT']);
-registerText('.project__info h3', ['PLANES — Project Management', 'Denta.Land — Dental Clinic Management', 'VANTA DRIVE — Luxury Car Rental']);
+registerText('.project__info h3', ['PLANES — Project Management', 'Denta.Land — Dental Clinic Management', 'FULL LOGISTICS — Fulfillment and Logistics']);
 registerText('.project__skills-label', ['Skills used', 'Skills used', 'Skills used']);
-registerAttribute('.project', 'aria-label', ['Open the PLANES project', 'Open the Denta.Land project', 'Open the VANTA DRIVE project']);
-registerAttribute('.project-cover', 'alt', ['PLANES project cover', 'Denta.Land project cover', 'VANTA DRIVE project cover']);
+registerAttribute('.project', 'aria-label', ['Open the PLANES project', 'Open the Denta.Land project', 'Open the FULL LOGISTICS project']);
+registerAttribute('.project-cover', 'alt', ['PLANES project cover', 'Denta.Land project cover', 'FULL LOGISTICS project cover']);
 
 registerText('#about .section-title', ['#about me']);
 registerHtml('.about__content h3', ['Welcome!<br>My name is <span>Aitenir.</span>']);
