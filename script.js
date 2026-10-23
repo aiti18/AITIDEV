@@ -697,12 +697,12 @@ registerText('.review-card--sample h3', ['Kurmanjan', 'Timur', 'Aksana']);
 registerText('.review-card--sample .review-card__meta', [
   'Project Manager · PLANES · sample review',
   'Clinic Administrator · Denta.Land · sample review',
-  'Service Manager · VANTA DRIVE · sample review'
+  'Client · FULL LOGISTICS'
 ]);
 registerText('.review-card--sample p', [
   'Aitenir quickly understood the PLANES requirements, suggested a clear structure and always stayed in touch. The project is polished, fast and easy to use, and every stage was completed within the agreed timeline.',
   'The Denta.Land project ran smoothly and transparently from prototype to launch. I especially appreciated the attention to detail, convenient interfaces and clear guidance on managing the platform afterwards.',
-  'VANTA DRIVE received a modern website that perfectly conveys the project’s premium style. Aitenir listened to our requests, helped with technical questions and delivered a finished site.'
+  'For FULL LOGISTICS, we received a modern website that clearly presents our fulfillment and logistics services. Aitenir listened to our requests, helped with technical questions and delivered the project as a finished product.'
 ]);
 registerAttribute('.review-card--sample img.review-card__avatar', 'alt', [
   'Portrait of Kurmanjan',
